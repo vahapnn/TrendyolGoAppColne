@@ -1,10 +1,12 @@
 package com.example.trendyolgocloneapp.trendyol.ui
 
+import android.content.Context
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -51,9 +53,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.trendyolgocloneapp.R
 
-@Preview(showBackground = true)
+//@Preview(showBackground = true)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(modifier: Modifier = Modifier) {
@@ -122,7 +128,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
         },
         content = {
             when (selectedIndex) {
-                0 -> HomePage(paddingValues = it)
+                0 -> HomePage(paddingValues=it)
                 1-> SiparislerimPAge(paddingValues = it)
                 2 -> ProfilePage(padding = it)
             }
